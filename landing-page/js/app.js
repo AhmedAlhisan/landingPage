@@ -81,20 +81,6 @@ window.onscroll = () =>{
 
 
 // Scroll to anchor ID using scrollTO event
-const scrolling = () => {
-    const links = document.querySelectorAll('.navbar__menu a');
-    links.forEach(link => {
-        link.addEventListener('click' , () => {
-           for(i=0 ; i < allSections ; i ++){
-            allSections[i].addEventListener('scrollTO',toSection(link));
-            
-           }
-           console.log(link);
-        });
-    });
-};
-scrolling();
-
 
 /**
  * End Main Functions
