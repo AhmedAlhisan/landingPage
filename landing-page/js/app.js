@@ -69,9 +69,15 @@ window.onscroll = () =>{
     document.querySelectorAll("section").forEach(function (active){
         if(active.getBoundingClientRect().top >= -400 && active.getBoundingClientRect().top <= 150 ){
             active.classList.add("your-active-class");
+            //highlight the active section
+            active.style.cssText = "background-color: #F34545;"
+            
         
         }else{
             active.classList.remove("your-active-class");
+            //remove the highlit from un active section.
+            active.style.cssText = "linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);"
+            
             
             
         }
