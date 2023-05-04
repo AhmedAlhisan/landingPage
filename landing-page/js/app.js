@@ -65,18 +65,29 @@ buldNavbar();
 
 
 // Add class 'active' to section when near top of viewport
-window.onscroll = () =>{
+window.onscroll = (section) =>{
     document.querySelectorAll("section").forEach(function (active){
         if(active.getBoundingClientRect().top >= -400 && active.getBoundingClientRect().top <= 150 ){
+         
             active.classList.add("your-active-class");
             //highlight the active section
             active.style.cssText = "background-color: #F34545;"
+            assigen_section = active.id.slice(7 , 8) - 1 ;
+            console.log(nvigationBar.childNodes[assigen_section]);
+            nvigationBar.childNodes[assigen_section].style.cssText = "background-color: #F34545;"
+            
+            
+            
+            
             
         
         }else{
             active.classList.remove("your-active-class");
             //remove the highlit from un active section.
             active.style.cssText = "linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);"
+            assigen_section = active.id.slice(7 , 8) - 1 ;
+            nvigationBar.childNodes[assigen_section].style.cssText = "background-color: #ffff;"
+
             
             
             
